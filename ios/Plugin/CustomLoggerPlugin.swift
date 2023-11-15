@@ -9,10 +9,10 @@ import Capacitor
 public class CustomLoggerPlugin: CAPPlugin {
     private let implementation = CustomLogger()
 
-    @objc func echo(_ call: CAPPluginCall) {
+    @objc func log(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         call.resolve([
-            "value": implementation.echo(value)
+            "value": implementation.log(value)
         ])
     }
 }
