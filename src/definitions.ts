@@ -1,3 +1,3 @@
 export interface CustomLoggerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  log(options: { value: string }): Promise<{ value: string }>;
 }
