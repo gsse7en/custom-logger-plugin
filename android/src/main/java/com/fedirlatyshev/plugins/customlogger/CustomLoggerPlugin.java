@@ -12,11 +12,11 @@ public class CustomLoggerPlugin extends Plugin {
     private CustomLogger implementation = new CustomLogger();
 
     @PluginMethod
-    public void echo(PluginCall call) {
+    public void log(PluginCall call) {
         String value = call.getString("value");
 
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
+        ret.put("value", implementation.log(value));
         call.resolve(ret);
     }
 }

@@ -4,8 +4,8 @@ import android.util.Log;
 
 public class CustomLogger {
 
-    public String echo(String value) {
-        Log.i("Echo", value);
+    public String log(String value) {
+        Log.i("ECHO ANDROID:", value);
         return value;
     }
 }
